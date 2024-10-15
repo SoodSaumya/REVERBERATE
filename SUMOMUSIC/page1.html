@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>"REVERBERATE"</title>
+        <link rel="stylesheet" href="samstyle.css">
+        <style>
+            .flex-container{
+                display:flex;
+            }
+            .left{
+                display:flex;
+                float:left;
+                width:25%;
+                border:1px solid purple;
+                height: 1000px;
+                border-radius: 20px;
+                overflow: scroll;
+                overflow-x: hidden;
+                scrollbar-width: 20px;
+                scrollbar-color: A9A9A9;
+            }
+            .right{
+                display:flex;
+                float:right;
+                width:75%;
+                border:2px solid purple;
+                background-image:url("aesthetic2.jpg" );
+                background-repeat: no-repeat;
+                background-size: 1000px 340px;
+                height: 343px;
+                
+            }
+            .form
+            {
+                margin-top: 100px;
+            }
+            input[type="search"]
+            {
+                margin-top: 320px;
+                width: 300px;
+                height: 30px;
+                margin-left: 300px;
+                border:3px solid black;
+                border-radius: 20px;
+            }
+            .login{
+                height: 30px;
+            }
+            button{
+                height: 40px;
+                border-radius: 20px;
+                width:80px;
+            }
+            .newflex{
+                display:flex;
+                border:1px solid red;
+                margin-left: 315px;
+                width:75%;
+                height: 500px;
+                margin-top: -652px;
+               
+            }
+           
+        </style>
+    </head>
+    <body>
+        <img style="height:48px;width: 85px;" src="logo.jpg">
+       
+        
+        <div style="color:white;margin-left: 90px;margin-top: -33px;font-weight: 900;font-size: larger;font-family:Papyrus;">Reverberate</div>
+        <div class="flex-container">
+           
+           <div class="left">
+            <p style="margin-left: 105px;font-family: sans-serif;font-weight: 800;font-size: 20px;color:9400D3;">GENRES</p><br/><br/>
+           <ul style="margin-top: 20px;margin-left: 10px;">
+            <li><button> anime themes</button></li>
+           </ul>
+           </div>
+           <div class="right">
+            <!--<img style="height:370px;width: 950px;" src="aesthetic2.jpg">-->
+            <form id="form">
+                <input type="search"
+                id="query" name="q"
+                placeholder="LOOK UP MUSIC...">
+                <button style=" margin-top: -46px;">Search</button>
+            </form>
+            <button id="login"><b>LOGIN</b></button>
+            <button ><b>SIGN UP</b></button>
+            <!--<div class="new">
+            <p id="tm" style="color: white;margin-top: 400px;margin-left: 100px;">Trending music</p>-->
+            </div>
+            </div>
+            
+           </div>
+           <div class="newflex">
+            <p  style="color: white;margin-top: 20px;margin-left: 10px;font-weight: 800;font-family:sans-serif;font-size: larger;">TRENDING MUSIC:</p><br/>
+            <img style="height:200px; width:200px;margin-top: 70px;margin-left: -192px;" src="playlist1.jpg"><br/>
+            <div style="color:white;margin-top: 275px;margin-left: -160px;font-family: sans-serif;">JEREMY ZUCKER,<br/>Always I'll Care</div>
+           </div>
+        </div>
+        
+    </body>
+</html>
