@@ -5,98 +5,347 @@
         <style>
             .flex-container{
                 display:flex;
+                margin: 0;
+               
+             
             }
             .left{
                 display:flex;
                 float:left;
-                width:26%;
+                width:25%;
                 border:1px solid purple;
                 height: 1000px;
                 border-radius: 20px;
-                overflow: scroll;
+                overflow-y: scroll;
                 overflow-x: hidden;
                 scrollbar-width: 20px;
                 scrollbar-color: A9A9A9;
-            }
+                margin-top: 0;
+                background-image: url("canva.jpg"); /* Replace with your image file */
+    background-repeat: no-repeat;
+    background-size: 100% 200px; /* Control height here (e.g., 200px) */
+    background-position:  center 80%;
+}
+
+
+               
+            
             .right{
                 display:flex;
                 float:right;
                 width:75%;
                 border:2px solid purple;
-                background-image:url("aesthetic2.jpg" );
+                background-image:url("back2.jpg" );
                 background-repeat: no-repeat;
-                background-size: 1000px 340px;
+              background-size: 960px 340px;
+               /* background-size: cover;*/
                 height: 343px;
                 
             }
             .form
             {
-                margin-top: 100px;
+                margin-top: 1px;
             }
             input[type="search"]
             {
-                margin-top: 320px;
-                width: 300px;
+                margin-top: 36px;
+                width: 325px;
                 height: 30px;
-                margin-left: 300px;
+                margin-left: 29px;
                 border:3px solid black;
                 border-radius: 20px;
+                background-color:lightgray;
+                color: black;
             }
             .login{
                 height: 30px;
             }
-            button{
+           /* button{
                 height: 40px;
                 border-radius: 20px;
                 width:80px;
-            }
+                background-color: black;
+                color: white;*/
+            
             .newflex{
                 display:flex;
-                border:1px solid red;
+                border:1px solid black;
                 margin-left: 315px;
                 width:75%;
-                height: 500px;
-                margin-top: -652px;
+                height: auto;
+                margin-top: -1000px;
                
             }
+            ul li{
+                margin-top: 20px;
+            }
+            .top-bar{
+                display:flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-bottom:20px ;
+            }
+           .banner{
+            display:flex;
+            margin-bottom:10px;
+            height: 340px;
+            width:100vw;
+            margin-bottom: 35px;
+            background-image: url("back2.jpg");
+            background-size: cover;
+            background-position: center;
+           }
+          .top-bar a:hover{
+            color: purple;
+           }
+           a {
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+            }
            
+            a:active {
+                color: blueviolet;
+            }
+             #ban{
+                height: 60px;
+                border-radius: 30px;
+                width:200px;
+                background-color: black;
+                color: white;
+                margin-top: 65px;
+                font-family: sans-serif;
+                font-weight: 700;
+                margin-left: -310px;
+
+            }
+            img:hover{
+                border:3px solid blueviolet;
+            }
+            .centerimg{
+                position:fixed;
+                bottom:30px;
+                left:50%;
+                width:50px;
+                height: 50px;
+                filter:invert(1);
+            }
+            .centerimg2{
+                position:fixed;
+                bottom:18px;
+                left:50%;
+                width:50px;
+                height: 50px;
+                filter:invert(1);
+            }
+            .centerimg3{
+                position:fixed;
+                bottom:18px;
+                left:55%;
+                width:50px;
+                height: 50px;
+                filter:invert(1);
+            }
+            .centerimg4{
+                position:fixed;
+                bottom:18px;
+                left:45%;
+                width:50px;
+                height: 50px;
+                filter:invert(1);
+            }
+            a:hover{
+                color: gold!important;
+            }
+            .left a {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    color: white; 
+    text-decoration: none; 
+    padding:0px;
+        width: 100%;
+        text-align: center;
+    
+}
+.left button:hover{
+    border-color: gold;
+}
+.secondflex {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-left: 315px;
+    width: 75%; 
+    border: 2px solid black; 
+    height: 500px; 
+    margin-top: 250px; 
+    margin-left: 160px;
+    padding-bottom: 10px;
+    
+}
+
+
+
         </style>
     </head>
     <body>
-        <img style="height:48px;width: 85px;" src="logo.jpg">
-       
+        <img src="play.svg" id="audioImage" onclick="playAudio()" class="centerimg2">
+        <img src="forward.svg"  onclick="forwardAudio()" class="centerimg3">
+        <img src="backward.svg"  onclick="reverseAudio()" class="centerimg4">
         
-        <div style="color:white;margin-left: 90px;margin-top: -33px;font-weight: 900;font-size: larger;font-family:Papyrus;">Reverberate</div>
+               <div class="top-bar">
+        <img style="height:82px;width: 214px;" src="logo1.jpg">
+
+       <!---- <span style="color:white;margin-left: -2px;margin-bottom: 1000px;font-weight: 900;font-size: larger;font-family:Papyrus;">Reverberate</span>-->
+        <form id="form">
+            <input type="search"
+            id="query" name="q"
+            placeholder="LOOK UP MUSIC...">
+            <button style=" margin-top: -4px;">Search</button>
+        </form>
+        <a href="demo.html" style="color: white;margin-left: 15px;margin-top:10px ;font-family: sans-serif;font-weight: 800;color: blueviolet;">DISCOVER</a>
+        <span style="color: white;margin-left: 15px;margin-top:10px ;font-family: sans-serif;font-weight: 800;color: blueviolet;">PLAYLISTS</span>
+        <span style="color: white;margin-left: 15px;margin-top:10px ;font-family: sans-serif;font-weight: 800;font-size: medium;color:blueviolet">ORIGINALS</span>
+        <span style="color: white;margin-left: 15px;margin-top:10px ;font-family: sans-serif;font-weight: 800;font-size: smaller;margin-left: 77px;">Create account|</span>
+        <span style="color: white;margin-left: 15px;margin-top:10px ;font-family: sans-serif;font-weight: 800;font-size: smaller;margin-left:0px">|SIGNUP</span>
+        </div>
+        <hr style="color:gray;height:0.5px;">
+        <div class="banner">
+        <h2 style="font-family: sans-serif;font-weight: 900px;margin-left: 600px;">The music platform empowering artists!</h2><br/>
+        <button id="ban">Upload your music for FREE</button>
+             </div>
         <div class="flex-container">
            
            <div class="left">
-            <p style="margin-left: 105px;font-family: sans-serif;font-weight: 800;font-size: 20px;color:9400D3;">GENRES</p><br/><br/>
-           <ul style="margin-top: 20px;margin-left: 10px;">
+            <p style="margin-left: 105px;font-family: sans-serif;font-weight: 800;font-size: 20px;color:9400D3;">BROWSE</p><br/><br/>
+            <ul>
+           <li> <a href="demo.html" style="margin-top: 60px;margin-left: -115px;" >Home</a></li>
+            <li><a href="demo.html" style="margin-left: -125px;"><div>Trending </div></a></li>
+            <li><a href="demo.html" style="margin-left: -125px;">Mega_Hits</a></li>
+            <li><a href="demo.html" style="margin-left: -125px;">Recents</a></li>
+            <li><a href="demo.html" style="margin-left: -125px;padding-bottom: 50px;"> Favourites</a></li>
+            </ul>
+            <p style="margin-left: -134px;font-family: sans-serif;font-weight: 800;font-size: 20px;color:9400D3;margin-top: 295px;">GENRES</p><br/><br/>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 335px;margin-left:-185px;">All Genres</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 335px;margin-left:4px;">Afro Sounds</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 335px;margin-left:2px;width:120x;">Carribean</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 380px;margin-left:-190px; ;">Hip-Hop/Rap</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 380px;margin-left:4px; ;">Punjabi</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 380px;margin-left:2px;width:120x;">Jazz</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 420px;margin-left:-258px; ;">Gospel</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 420px;margin-left:4px; ;">Instrumental</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 420px;margin-left:2px;width:120x;">Electronic</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 460px;margin-left:-228px; ;">Country</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 460px;margin-left:4px; ;">Podcast</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 460px;margin-left:2px;width:120x;">Rock</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 500px;margin-left:-110px; ;">Latin</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 500px;margin-left:4px; ;">Pop</button>
+            <button style="color:white;background-color: black;height: 40px;border-radius: 25px;margin-top: 500px;margin-left:2px;width:120x;">Hindi</button>
+           <!--<ul style="margin-left: 10px;">
+           <!--<ul style="margin-left: 10px;">
+           <!--<ul style="margin-left: 10px;">
+            <a href="demo.html" style="margin-top: 70px;margin-left: -112px;font-family: sans-serif;font-weight: 900;font-size: 17px">Trending Songs</a>
+           <!--<ul style="margin-left: 10px;">
+
+           <!--<ul style="margin-left: 10px;">
             <li><button> anime themes</button></li>
-           </ul>
+           </ul>-->
+          <button style="background-color: gold;color:black;border-radius: 25px;height: 40px;width: 150px;margin-top:775px;margin-left: -150px;"><b>Start a FREE Trial</b></button>
            </div>
-           <div class="right">
-            <!--<img style="height:370px;width: 950px;" src="aesthetic2.jpg">-->
-            <form id="form">
-                <input type="search"
-                id="query" name="q"
-                placeholder="LOOK UP MUSIC...">
-                <button style=" margin-top: -46px;">Search</button>
-            </form>
-            <button id="login"><b>LOGIN</b></button>
-            <button ><b>SIGN UP</b></button>
-            <!--<div class="new">
-            <p id="tm" style="color: white;margin-top: 400px;margin-left: 100px;">Trending music</p>-->
-            </div>
+          
             </div>
             
            </div>
            <div class="newflex">
-            <p  style="color: white;margin-top: 20px;margin-left: 10px;font-weight: 800;font-family:sans-serif;font-size: larger;">TRENDING MUSIC:</p><br/>
-            <img style="height:200px; width:200px;margin-top: 70px;margin-left: -192px;" src="playlist1.jpg"><br/>
-            <div style="color:white;margin-top: 275px;margin-left: -160px;font-family: sans-serif;">JEREMY ZUCKER,<br/>Always I'll Care</div>
+            <p  style="color: white;margin-top: 20px;margin-left: 10px;font-weight: 800;font-family:sans-serif;font-size: larger;">TRENDING MUSIC</p><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 70px;margin-left: -192px;" src="playlist1.jpg" onclick="playAudio()"><br/>
+            <audio id="audioPlayer" src="song1.mp3"></audio>
+            <progress id="progressBar" value="0" max="100" style="width:100%; position:fixed; bottom:0px; height:17px;left:0;background-color: blueviolet;"></progress>
+            <div style="color:white;margin-top: 275px;margin-left: -160px;font-family: sans-serif;">JEREMY ZUCKER<br/>Always I'll Care</div>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 70px;margin-left: 45px; "src="espresso.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 70px;margin-left: 23px; "src="karan.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 70px;margin-left: 23px; "src="honey.jpg" onclick="playAudio()"><br/>
+            <p  style="color: white;margin-top: 380px;margin-left: -871px;font-weight: 800;font-family:sans-serif;font-size: larger;">TRENDING ALBUMS</p><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 431px;margin-left: -211px;" src="dear.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 431px;margin-left: 25px;" src="jigra.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 431px;margin-left: 25px;" src="queen.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 431px;margin-left: 25px;" src="brahm.jpg" onclick="playAudio()"><br/>
+            <p  style="color: white;margin-top: 715px;margin-left: -871px;font-weight: 800;font-family:sans-serif;font-size: larger;">TOP REVERBERATE ALBUMS</p><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 760px;margin-left: -307px;" src="lootera.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 760px;margin-left: 27px;" src="kalank.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 760px;margin-left: 27px;" src="khoob.jpg" onclick="playAudio()"><br/>
+            <img id= "playImage" style="height:200px; width:200px;margin-top: 760px;margin-left: 31px;" src="cocktail.jpg" onclick="playAudio()"><br/>
+            <p style="color: white;font-family: sans-serif;margin-top: 275;margin-left: -650px;">SABRINA CARPENTER<br/>Espresso</p>
+            <p style="color: white;font-family: sans-serif;margin-top: 275;margin-left: 53px;">KARAN AUJLA<br/>Softly</p>
+            <p style="color: white;font-family: sans-serif;margin-top: 275;margin-left: 115px;">HONEY SINGH<br/>Millionaire</p>
+           
+          
+                
            </div>
+           <div class="secondflex">
+           <img style="height:80px;width:100px;margin-top: 10px;margin-left: 400px;" src="logo.jpg">
+           <img style="height:30px;width:30px;margin-top: 100px;margin-left: -190px;filter:invert(1);" src="twitter.svg">
+           <img style="height:30px;width:30px;margin-top: 100px;margin-left: 35px;filter:invert(1);" src="facebook.svg">
+           <img style="height:30px;width:30px;margin-top: 100px;margin-left: 35px;filter:invert(1);" src="instagram.svg">
+           <img style="height:30px;width:30px;margin-top: 100px;margin-left: 35px;filter:invert(1);" src="tiktok.svg">
+           <img style="height:30px;width:30px;margin-top: 100px;margin-left: 35px;filter:invert(1);" src="youtube.svg">
+           <a style="color: white;font-family: sans-serif;font-weight: 800;margin-top: 150px;margin-left: -385px;" >ABOUT</a>
+           <a style="color: white;font-family: sans-serif;font-weight: 800;margin-top: 150px;margin-left: 30px;" >HELP</a>
+           <a style="color: white;font-family: sans-serif;font-weight: 800;margin-top: 150px;margin-left: 30px;" >BUSINESS INQUIRIES</a>
+           <a style="color: white;font-family: sans-serif;font-weight: 800;margin-top: 150px;margin-left: 30px;" >CREATOR APP</a>
+           <div style="color:white;font-family: sans-serif;text-align: justify;margin-top: -95px;margin-left:110px">Reverberate is an on-demand music streaming and audio discovery platform that allows
+             artists and </div>
+             <div style="color:white;font-family: sans-serif;text-align: justify;margin-top: -180px;margin-left:115px">creators to upload limitless music and podcasts for listeners through its mobile apps
+                and website. </div>
+               
+                
+             
         </div>
-        
+        <script>
+             var audio=document.getElementById("audioPlayer");
+             const progressBar=document.getElementById("progressBar");
+             const playImage=document.getElementById("playImage");
+
+            function playAudio(){
+               
+                audio.play();
+                playImage.style.border="3px solid yellow";
+                audioImage.src="pause.svg";
+            }
+            function pauseAudio(){
+                audio.pause();
+                playImage.style.border="none";
+            }
+            function toggleAudio(){
+                if(audio.paused){
+                    audio.play();
+                    audioImage.src="pause.svg";
+                }
+                else{
+                    audio.pause();
+                    audioImage.src="play.svg";
+                }
+            }
+            audio.ontimeupdate=function(){
+                const progress=(audio.currentTime/audio.duration)*100;
+                progressBar.value=progress;
+            }
+               audio.onended=function(){
+                playImage.style.border="none";
+               }
+            audioImage.onclick=toggleAudio;
+            function forwardAudio(){
+                audio.currentTime=Math.min(audio.currentTime+10,audio.duration);
+            }
+            function reverseAudio(){
+                audio.currentTime=Math.min(audio.currentTime-10,audio.duration);
+            }
+            ban.onclick=function(){
+                window.open('forartist.html');
+            }
+        </script>
     </body>
 </html>

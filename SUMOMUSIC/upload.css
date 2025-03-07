@@ -1,0 +1,26 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0; 
+    overflow-x: hidden;
+    background-color: black; 
+}
+
+.upload {
+    color: white;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+}
+.box {
+    background-color: #1e1e1e; 
+    padding: 20px;
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    display: inline-block;
+    text-align: center;
+}
